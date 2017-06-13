@@ -1,0 +1,82 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Extend
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Hover color
+.link-hover-color {
+	color: @color-primary;
+	.transition(~"color .3s ease");
+
+	&:hover {
+		color: darken(@color-primary, 10%);
+	}
+}
+
+// Clearfix
+.clearfix {
+	&:before,
+	&:after {
+		display: table;
+		content: " ";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+.text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// CSS image replacement
+.text-hide {
+	font: ~"0/0" a;
+	color: transparent;
+	text-shadow: none;
+	text-indent: -9999px;
+	background-color: transparent;
+	border: 0;
+}
+
+// Inline-block
+.display-ib {
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+}
+
+// Image Responsive
+.img-responsive {
+	display: block;
+	width: 100% \9;
+	max-width: 100%;
+	height: auto;
+}
+
+// Centering
+.centering-vert {
+	position: absolute;
+	top: 50%;
+	.transform(translateY(-50%));
+}
+
+.centering-horiz {
+	position: absolute;
+	left: 50%;
+	.transform(translateX(-50%));
+}
+
+.centering-vert-horiz {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	.transform(translate(-50%, -50%));
+}

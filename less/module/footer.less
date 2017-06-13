@@ -1,0 +1,113 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Footer
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Sticky footer
+// html,
+// body {
+//     height: 100%;
+// }
+
+// .wrapper {
+//     clear: both;
+//     min-height: 100%;
+//     height: auto !important;
+//     height: 100%;
+//     margin-bottom: -@height-footer;
+// }
+
+// .push {
+//     height: @height-footer;
+// }
+
+// .footer {
+//     clear: both;
+//     position: relative;
+//     height: @height-footer;
+// }
+
+// Fix height for `mmenu plugin`
+// .mm-page {
+//     height: 100%;
+// }
+
+
+.footer {
+	border-top: 1px solid #E5E5E5;
+}
+
+.footer-top {
+	padding-top: 45px;
+	padding-bottom: 10px;
+
+	.title {
+		font-size: 26px;
+		font-weight: @font-bold;
+		text-transform: uppercase;
+	}
+
+	.content-info {
+		margin-top: 20px;
+		font-size: 15px;
+
+		p {
+			padding: 1px 0;
+		}
+	}
+
+	.emphasis {
+		&:extend(.link-hover-color all);
+	}
+
+	.item {
+		margin-bottom: 20px;
+	}
+
+
+	@media @phone {
+		text-align: center;
+	}
+}
+
+.footer-bottom {
+	&:extend(.clearfix all);
+	border-top: 1px solid #E5E5E5;
+	padding: 35px 0;
+	font-size: 16px;
+
+	.copyright {
+		float: left;
+
+		.link:hover {
+			color: @color-primary;
+		}
+	}
+
+	.designby {
+		float: right;
+
+		.link:hover {
+			color: @color-secondary;
+		}
+	}
+
+	.link {
+		.transition(~"color .3s ease");
+		font-weight: @font-bold;
+	}
+
+
+	@media @smallphone {
+		text-align: center;
+
+		.copyright,
+		.designby {
+			float: none;
+		}
+
+		.designby {
+			margin-top: 10px;
+		}
+	}
+}

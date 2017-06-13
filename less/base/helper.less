@@ -1,0 +1,54 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Helper
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Show & Hide
+.show { display: block !important; }
+.hide { display: none !important; }
+.visible { visibility: visible !important; }
+.invisible { visibility: hidden !important; }
+
+// Inline & Block
+.block { display: block !important; }
+.inline { display: inline !important; }
+.inline-block { display: inline-block !important; }
+
+// Text
+.text-normal { font-weight: 400; }
+.text-bold { font-weight: 700; }
+.text-italic { font-style: italic; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+
+// Position
+.pos-relative { position: relative !important; }
+.pos-absolute { position: absolute !important; }
+.pos-fixed { position: fixed !important; }
+.pos-static { position: static !important; }
+
+// Vertical Align
+.ver-ali-top { vertical-align: top; }
+.ver-ali-bottom { vertical-align: bottom; }
+.ver-ali-middle { vertical-align: middle; }
+
+// Margin & Padding
+.loop(@counter, @i: 0) when (@i <= @counter) {
+    @value: @i * 5;
+
+    // Margin
+    .mt@{value} { margin-top: ~"@{value}px" !important; }
+    .mr@{value} { margin-right: ~"@{value}px" !important; }
+    .mb@{value} { margin-bottom: ~"@{value}px" !important; }
+    .ml@{value} { margin-left: ~"@{value}px" !important; }
+
+    // Padding
+    .pt@{value} { padding-top: ~"@{value}px" !important; }
+    .pr@{value} { padding-right: ~"@{value}px" !important; }
+    .pb@{value} { padding-bottom: ~"@{value}px" !important; }
+    .pl@{value} { padding-left: ~"@{value}px" !important; }
+
+    .loop(@counter, (@i + 1));
+}
+.loop(4);

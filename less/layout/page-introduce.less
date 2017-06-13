@@ -1,0 +1,90 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Introduce
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.introduce-detail {
+	padding-top: 40px;
+
+	.common-intro {
+		text-align: center;
+
+		.title {
+			font-size: 30px;
+			text-transform: uppercase;
+			color: #5D5D5D;
+			font-weight: 700;
+		}
+
+		.sub-title {
+			font-size: 21px;
+			color: #6F7477;
+			margin-top: 10px;
+			font-weight: @font-normal;
+		}
+
+		.image-intro {
+			display: block;
+			margin: 20px auto 0;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.description {
+			margin-top: 30px;
+			padding: 0 20px;
+		}
+	}
+
+	.testimonial {
+		margin-top: 30px;
+		padding-top: 30px;
+		border-top: 1px solid #eeeeee;
+
+		.item {
+			.author {
+				margin-top: 30px;
+			}
+
+			.position {
+				padding-top: 3px;
+			}
+
+			.avatar {
+				.box-shadow(~"0 0 0 8px #e8e8e8");
+			}
+
+			.blockquote {
+				font-size: 16px;
+				margin-left: 0;
+				margin-right: 0;
+
+				&:before {
+					content: url("@{image-url}/quote-left-sm.png");
+					margin-right: 5px;
+				}
+
+				&:after {
+					content: url("@{image-url}/quote-right-sm.png");
+					margin-left: 5px;
+					margin-bottom: -6px;
+				}
+			}
+		}
+	}
+
+
+	@media @phone {
+		.common-intro {
+			.description {
+				padding: 0;
+			}
+		}
+
+		.testimonial {
+			.item + .item {
+				margin-top: 40px;
+			}
+		}
+	}
+}

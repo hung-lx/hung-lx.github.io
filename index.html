@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Etron Smarthome</title>
+		<link rel="shortcut icon" href="img/www/favicon.ico">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 9]>
+			<div class="ie-no-support">
+				<h3 class="title">Xin lỗi!!! Chúng tôi không hỗ trợ cho trình duyệt IE này</h3>
+				<p class="description">Vui lòng click theo đường dẫn để <a href="http://browsehappy.com/">cập nhật trình duyệt</a> hiện đại hoặc IE phiên bản mới nhất giúp duyệt web tốt hơn</p>
+			</div>
+		<![endif]-->
+
+		<div class="wrapper animated fadeIn">
+			<header class="header">
+				<div class="container">
+					<a href="#menu-mobile" class="navbar-toggle button-menu-mobile">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					</a>
+					<h1 class="logo">
+						<a href="#">
+							<img src="img/temp/logo.png" alt="Logo Etron Smarthome" width="116" height="52">
+						</a>
+					</h1>
+					<div class="wrap-right">
+						<ul class="nav nav-pills menu">
+							<li class="item is-active"><a href="index.html">Trang chủ</a></li>
+							<li class="item"><a href="Smarthome-Gioithieu.html">Giới thiệu</a></li>
+							<li class="item"><a href="Smarthome-Giaiphap.html">Giải pháp</a></li>
+							<li class="item"><a href="Smarthome-Congtrinh.html">Công trình</a></li>
+							<li class="item"><a href="Smarthome-Video.html">Videos</a></li>
+							<li class="item"><a href="Smarthome-Lienhe.html">Liên hệ</a></li>
+						</ul>
+						<select name="select-language" class="select-language js-select-language" onchange="showValue(this.value)">
+							<option value="Vietnamese">Tiếng Việt</option>
+							<option value="English">English</option>
+						</select>
+					</div>
+				</div>
+			</header>
+			<section class="banner" data-stellar-background-ratio="0.5">
+				<div class="inner">
+					<h2 class="title-lg wow bounceInDown" data-wow-delay="0.6s">Etron Technology Smart Home</h2>
+					<h2 class="title-md wow bounceInDown" data-wow-delay="0.4s">Giải pháp cho ngôi nhà của bạn</h2>
+					<a href="#" class="btn button-primary wow fadeInUp" data-wow-delay="1s">Videos <i class="icon icon-chevron-right"></i></a>
+					<div class="content-nav">
+						<div class="container">
+							<ul class="row list-nav">
+								<li class="col-md-2 col-xs-4 item wow bounceInLeft" data-wow-delay="1.4s">
+									<a href="#">
+										<span class="wrap-icon">
+											<i class="icon icon-air-conditioning-control"></i>
+										</span>
+										<span class="text">Điều khiển điều hòa</span>
+									</a>
+								</li>
+								<li class="col-md-2 col-xs-4 item wow bounceInLeft" data-wow-delay="1.2s">
+									<a href="#">
+										<span class="wrap-icon">
+											<i class="icon icon-environmental-control"></i>
+										</span>
+										<span class="text">Kiểm soát môi trường</span>
+									</a>
+								</li>
+								<li class="col-md-2 col-xs-4 item wow bounceInLeft" data-wow-delay="1s">
+									<a href="#">
+										<span class="wrap-icon">
+											<i class="icon icon-security-surveillance"></i>
+										</span>
+										<span class="text">An ninh giám sát</span>
+									</a>
+								</li>
+								<li class="col-md-2 col-xs-4 item wow bounceInRight" data-wow-delay="1s">
+									<a href="#">
+										<span class="wrap-icon">
+											<i class="icon icon-intelligent-control"></i>
+										</span>
+										<span class="text">Điều khiển thông minh</span>
+									</a>
+								</li>
+								<li class="col-md-2 col-xs-4 item wow bounceInRight" data-wow-delay="1.2s">
+									<a href="#">
+										<span class="wrap-icon">
+											<i class="icon icon-multiroom-audio"></i>
+										</span>
+										<span class="text">Âm thanh đa vùng</span>
+									</a>
+								</li>
+								<li class="col-md-2 col-xs-4 item wow bounceInRight" data-wow-delay="1.4s">
+									<a href="#">
+										<span class="wrap-icon">
+											<i class="icon icon-intelligent-lighting"></i>
+										</span>
+										<span class="text">Ánh sáng thông minh</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="article-featured">
+				<div class="container">
+					<div class="row">
+						<article class="col-sm-4 col-xs-6 article wow fadeInUp" data-wow-delay="0.2s">
+							<div class="wrap-title">
+								<h3 class="title-lg">
+									<a href="#">Tin tức / Sự kiện</a>
+								</h3>
+								<a href="#" class="view-all">
+									<i class="icon icon-arrow-right"></i>
+									Xem tất cả
+								</a>
+							</div>
+							<div class="article-info">
+								<a href="#">
+									<img class="image" src="img/temp/img-1.jpg" alt="image article" width="380" height="201">
+								</a>
+								<h4 class="title">
+									<a href="#">Mổ nhà thông minh Etron</a>
+								</h4>
+								<p class="description">
+									Nhà thông minh Etron SmartHome là căn nhà được tích hợp công nghệ vào các vật dụng để dễ dàng điều khiển, kết nối thông qua mạng Internet, tự động làm những công việc...
+								</p>
+							</div>
+						</article>
+						<article class="col-sm-4 col-xs-6 article wow fadeInUp" data-wow-delay="0.4s">
+							<div class="wrap-title">
+								<h3 class="title-lg">
+									<a href="#">Công trình</a>
+								</h3>
+								<a href="#" class="view-all">
+									<i class="icon icon-arrow-right"></i>
+									Xem tất cả
+								</a>
+							</div>
+							<div class="article-info">
+								<a href="#">
+									<img class="image" src="img/temp/img-2.jpg" alt="image article" width="380" height="201">
+								</a>
+								<h4 class="title">
+									<a href="#">Loft House Mandarin Garden</a>
+								</h4>
+								<p class="description">
+									Xuất phát từ nhu cầu thực tế của gia đình là làm thế nào để nhắc nhở con cái tự giác thức dậy buổi sớm hay xem tivi đúng giờ… Chúng Tôi đã tư vấn giải pháp nhà thông minh...
+								</p>
+							</div>
+						</article>
+						<article class="col-sm-4 col-xs-6 article wow fadeInUp" data-wow-delay="0.6s">
+							<div class="wrap-title">
+								<h3 class="title-lg">
+									<a href="#">Trải nghiệm</a>
+								</h3>
+								<a href="#" class="view-all">
+									<i class="icon icon-arrow-right"></i>
+									Xem tất cả
+								</a>
+							</div>
+							<div class="article-info">
+								<a href="#" class="wrap-video">
+									<img class="image" src="img/temp/img-3.jpg" alt="image article" width="380" height="201">
+									<i class="icon icon-play"></i>
+								</a>
+								<h4 class="title">
+									<a href="#">Tinh tế trải nghiệm Etron Smart Home</a>
+								</h4>
+								<p class="description">
+									Với đội ngũ chuyên gia hàng đầu về công nghệ nhà ở thông minh, chúng tôi cung cấp giải pháp toàn diện về nhà thông minh, cùng trải nghệm và chứng minh đẳng cấp...
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="introduce">
+				<div class="container">
+					<h2 class="title wow fadeInDown">Giới thiệu Leviton</h2>
+					<p class="description wow fadeInUp" data-wow-delay="0.2s">
+						Leviton Manufacturing Co., Inc thành lập năm 1906 bởi Isidor Leviton, có trụ sở chính tại 201 North Service Rd. Melville, New York 11747, USA. Leviton là tập đoàn công nghệ nằm trong top 500 doanh nghiệp lớn nhất nước Mỹ. Hiện nay, sản phẩm của Leviton đã được sử dụng rộng rãi trên toàn cầu với hơn 2000 đại lý triển khai.
+					</p>
+					<p class="description wow fadeInUp" data-wow-delay="0.4s">Etron Technology là đơn vị triển khai giải pháp nhà thông minh Leviton tại Việt Nam.</p>
+				</div>
+			</section>
+			<section class="testimonial">
+				<div class="container">
+					<div class="testimonial-slider js-testimonial-slider">
+						<div class="item">
+							<img class="avatar wow shake" src="img/temp/img-4.jpg" alt="avatar" width="110" height="110">
+							<blockquote class="blockquote wow fadeInUp" data-wow-delay="0.2s">
+								Giải pháp nhà thông minh Leviton là giải pháp nhà thông minh tích hợp đồng bộ các tính năng An ninh, điều khiển chiếu sáng, âm thanh đa vùng, quản lý năng lượng
+							</blockquote>
+							<div class="author wow fadeInUp" data-wow-delay="0.4s">
+								<strong class="name">Jay Mclellan</strong>
+								-
+								<span class="position">Chủ tịch Leviton Security & Automation</span>
+							</div>
+						</div>
+						<div class="item">
+							<img class="avatar" src="img/temp/img-5.jpg" alt="avatar" width="110" height="110">
+							<blockquote class="blockquote">
+								Giải pháp nhà thông minh Leviton là giải pháp nhà thông minh tích hợp đồng bộ các tính năng An ninh, điều khiển chiếu sáng, âm thanh đa vùng, quản lý năng lượng và các ứng dụng điều khiển tự động
+							</blockquote>
+							<div class="author">
+								<strong class="name">Jay Mclellan</strong>
+								-
+								<span class="position">Chủ tịch Leviton Security & Automation</span>
+							</div>
+						</div>
+						<div class="item">
+							<img class="avatar" src="img/temp/img-6.jpg" alt="avatar" width="110" height="110">
+							<blockquote class="blockquote">
+								Giải pháp nhà thông minh Leviton là giải pháp nhà thông minh tích hợp đồng bộ các tính năng An ninh, điều khiển chiếu sáng, âm thanh đa vùng, quản lý năng lượng
+							</blockquote>
+							<div class="author">
+								<strong class="name">Jay Mclellan</strong>
+								-
+								<span class="position">Chủ tịch Leviton Security & Automation</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="partner">
+				<div class="container">
+					<p class="text wow bounceInLeft">
+						Etron Technology là đối tác chiến lược của hãng công nghệ nhà thông minh tiên tiến nhất thế giới <a href="#">LEVITON – USA</a>,
+						hãng sản xuất cảm biến an ninh <a href="#">OPTEX – Nhật bản</a>, Hãng loa âm thanh <a href="#">TRUAUDIO – USA</a>,
+						hãng đèn chiếu sáng <a href="#">PHILIPS</a>, Hãng thiết bị điều khiển chiếu sáng chuẩn <a href="#">KNX ABB</a>…
+					</p>
+					<div class="list-logo">
+						<div class="item">
+							<a href="#">
+								<img class="wow flipInX" data-wow-delay="0.2s" src="img/temp/img-7.jpg" alt="logo partner">
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img class="wow flipInX" data-wow-delay="0.4s" src="img/temp/img-8.jpg" alt="logo partner">
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img class="wow flipInX" data-wow-delay="0.6s" src="img/temp/img-9.jpg" alt="logo partner">
+							</a>
+						</div>
+					</div>
+					<p class="text-2 wow bounceInRight" data-wow-delay="0.8s">
+						Sản phẩm của các hãng đã sử dụng rộng rãi trên toàn cầu và được chứng minh về mặt chất lượng, tính ưu việt của sản phẩm bởi người dùng trên toàn thế giới
+					</p>
+				</div>
+			</section>
+			<section class="download-brochure" data-stellar-background-ratio="0.5">
+				<div class="container">
+					<h2 class="title wow fadeInDown">Vì sao chọn etron-leviton?</h2>
+					<p class="description wow fadeInUp" data-wow-delay="0.2s">
+						Chúng tôi chuyên cung cấp các giải pháp “công nghệ thông minh” cho việc tự động hóa, kiểm soát các hệ thống trong nhà như chiếu sáng, an ninh báo động, giải trí. Thế mạnh của chúng tôi là gì?
+					</p>
+					<ul class="list">
+						<li class="item wow fadeInLeft" data-wow-delay="0.4s">Luôn dẫn đầu trong việc áp dụng công nghệ mới</li>
+						<li class="item wow fadeInLeft" data-wow-delay="0.6s">Hỗ trợ khách hàng trong suốt quá trình sử dụng</li>
+						<li class="item wow fadeInLeft" data-wow-delay="0.8s">Luôn tận tâm trong mỗi công trình</li>
+						<li class="item wow fadeInLeft" data-wow-delay="1s">Giá cả cạnh tranh</li>
+					</ul>
+					<a href="#" class="btn button-primary wow flipInX" data-wow-delay="1.2s">Tải brochure <i class="icon icon-chevron-right"></i></a>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4 item wow fadeInUp" data-wow-delay="0.2s">
+								<h2 class="title">TP.HCM</h2>
+								<div class="content-info">
+									<p>19 Khu biệt thự Mỹ Hào, Phú Mỹ Hưng, Q.7, TP HCM</p>
+									<p>Đại diện: Mr. Nguyễn Trung Thuận</p>
+									<p>Điện thoại: <span class="emphasis">0912 836 836</span></p>
+									<p>Email: <a href="mailto:trungthuan@etron.com.vn" class="emphasis">trungthuan@etron.com.vn</a></p>
+								</div>
+							</div>
+							<div class="col-sm-4 item wow fadeInUp" data-wow-delay="0.4s">
+								<h2 class="title">Đà Nẵng</h2>
+								<div class="content-info">
+									<p>152 Hàm Nghi, Q.Thanh Khê, Đà Nẵng</p>
+									<p>Đại diện: Mr. Lê Trung Can</p>
+									<p>Điện thoại: <span class="emphasis">0903 555 931</span></p>
+									<p>Email: <a href="mailto:trungcan@etron.com.vn" class="emphasis">trungcan@etron.com.vn</a></p>
+								</div>
+							</div>
+							<div class="col-sm-4 item wow fadeInUp" data-wow-delay="0.6s">
+								<h2 class="title">Hà Nội</h2>
+								<div class="content-info">
+									<p>19 Lê Văn Hưu, Q.Hai Bà Trưng, Hà Nội</p>
+									<p>Đại diện: Mr. Hà Tiến Hùng</p>
+									<p>Điện thoại: <span class="emphasis">09824 000 18</span></p>
+									<p>Email: <a href="mailto:tienhung@etron.com.vn" class="emphasis">tienhung@etron.com.vn</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<p class="copyright">&copy; 2015 Copyright </p>
+						
+					</div>
+				</div>
+			</footer>
+		</div>
+		<nav id="menu-mobile">
+			<ul>
+				<li class="item mm-selected"><a href="index.html">Trang chủ</a></li>
+				<li class="item"><a href="Smarthome-Gioithieu.html">Giới thiệu</a></li>
+				<li class="item"><a href="Smarthome-Giaiphap.html">Giải pháp</a></li>
+				<li class="item"><a href="Smarthome-Congtrinh.html">Công trình</a></li>
+				<li class="item"><a href="Smarthome-Video.html">Videos</a></li>
+				<li class="item"><a href="Smarthome-Lienhe.html">Liên hệ</a></li>
+			</ul>
+		</nav>
+
+		<script src="js/vendor/jquery-1.11.1.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/wow.min.js"></script>
+		<script src="js/vendor/jquery.stellar.js"></script>
+		<script src="js/vendor/jquery.dd.min.js"></script>
+		<script src="js/vendor/slick.min.js"></script>
+		<script src="js/vendor/jquery.mmenu.min.js"></script>
+		<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+		<script src="js/vendor/smooth-scroll.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

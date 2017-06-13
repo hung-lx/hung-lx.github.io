@@ -1,0 +1,73 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Header
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.header {
+	position: relative;
+
+	&:after {
+		.position(@bottom: -8px, @left: 0);
+		.size(100%, 8px);
+		z-index: 2;
+		content: "";
+		display: inline-block;
+		background: url("@{image-url}/shadow.png") repeat-x;
+	}
+
+	.logo {
+		float: left;
+		margin: 17px 0;
+	}
+
+	.wrap-right {
+		float: right;
+	}
+
+	.menu {
+		float: left;
+		margin: 23px 0 0;
+	}
+
+	.nav-pills>li>a {
+		.transition(~"all .3s ease");
+		.border-radius(20px);
+		.border(transparent);
+		padding: 8px 28px;
+		color: #6e7476;
+		font-size: 16px;
+	}
+
+	.nav>li>a:hover,
+	.nav>li>a:focus,
+	.nav>li.is-active>a {
+		border-color: @color-primary;
+		color: @color-primary;
+		background: none;
+	}
+
+	@media @desktop {
+		.menu {
+			display: none;
+		}
+	}
+}
+
+.button-menu-mobile {
+	display: none;
+	float: left;
+	margin-top: 26px;
+	padding-left: 0;
+
+	.icon-bar {
+		background-color: @color-black;
+	}
+
+	@media @desktop {
+		display: block;
+	}
+
+	@media @extra-smallphone {
+		margin-right: 5px;
+	}
+}

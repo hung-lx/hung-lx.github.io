@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Etron Smarthome</title>
+		<link rel="shortcut icon" href="img/www/favicon.ico">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 9]>
+			<div class="ie-no-support">
+				<h3 class="title">Xin lỗi!!! Chúng tôi không hỗ trợ cho trình duyệt IE này</h3>
+				<p class="description">Vui lòng click theo đường dẫn để <a href="http://browsehappy.com/">cập nhật trình duyệt</a> hiện đại hoặc IE phiên bản mới nhất giúp duyệt web tốt hơn</p>
+			</div>
+		<![endif]-->
+		<div class="wrapper animated fadeIn">
+			<header class="header">
+				<div class="container">
+					<a href="#menu-mobile" class="navbar-toggle button-menu-mobile">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					</a>
+					<h1 class="logo">
+						<a href="#">
+							<img src="img/temp/logo.png" alt="Logo Etron Smarthome" width="116" height="52">
+						</a>
+					</h1>
+					<div class="wrap-right">
+						<ul class="nav nav-pills menu">
+							<li class="item"><a href="index.html">Trang chủ</a></li>
+							<li class="item"><a href="Smarthome-Gioithieu.html">Giới thiệu</a></li>
+							<li class="item"><a href="Smarthome-Giaiphap.html">Giải pháp</a></li>
+							<li class="item"><a href="Smarthome-Congtrinh.html">Công trình</a></li>
+							<li class="item"><a href="Smarthome-Video.html">Videos</a></li>
+							<li class="item"><a href="Smarthome-Lienhe.html">Liên hệ</a></li>
+						</ul>
+						<select name="select-language" class="select-language js-select-language" onchange="showValue(this.value)">
+							<option value="Vietnamese">Tiếng Việt</option>
+							<option value="English">English</option>
+						</select>
+					</div>
+				</div>
+			</header>
+			<section class="page-404">
+				<div class="container">
+					<img class="image" src="img/temp/img-404.png" alt="image 404" width="321" height="224">
+					<div class="wrap-text">
+						<h3 class="text-lg">Không tìm thấy trang</h3>
+						<p>Trang bạn đã yêu cầu không thể được hiển thị</p>
+						<p>Trang này không tồn tại hoặc đã bị xóa hoặc do lỗi tạm thời của máy chủ</p>
+						<a href="#" class="btn button-primary"><i class="icon icon-chevron-right"></i> Trở lại trang chủ</a>
+					</div>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4 item">
+								<h2 class="title">TP.HCM</h2>
+								<div class="content-info">
+									<p>19 Khu biệt thự Mỹ Hào, Phú Mỹ Hưng, Q.7, TP HCM</p>
+									<p>Đại diện: Mr. Nguyễn Trung Thuận</p>
+									<p>Điện thoại: <span class="emphasis">0912 836 836</span></p>
+									<p>Email: <a href="mailto:trungthuan@etron.com.vn" class="emphasis">trungthuan@etron.com.vn</a></p>
+								</div>
+							</div>
+							<div class="col-sm-4 item">
+								<h2 class="title">Đà Nẵng</h2>
+								<div class="content-info">
+									<p>152 Hàm Nghi, Q.Thanh Khê, Đà Nẵng</p>
+									<p>Đại diện: Mr. Lê Trung Can</p>
+									<p>Điện thoại: <span class="emphasis">0903 555 931</span></p>
+									<p>Email: <a href="mailto:trungcan@etron.com.vn" class="emphasis">trungcan@etron.com.vn</a></p>
+								</div>
+							</div>
+							<div class="col-sm-4 item">
+								<h2 class="title">Hà Nội</h2>
+								<div class="content-info">
+									<p>19 Lê Văn Hưu, Q.Hai Bà Trưng, Hà Nội</p>
+									<p>Đại diện: Mr. Hà Tiến Hùng</p>
+									<p>Điện thoại: <span class="emphasis">09824 000 18</span></p>
+									<p>Email: <a href="mailto:tienhung@etron.com.vn" class="emphasis">tienhung@etron.com.vn</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<p class="copyright">&copy; 2015 Copyright </p>
+						
+					</div>
+				</div>
+			</footer>
+		</div>
+		<nav id="menu-mobile">
+			<ul>
+				<li class="item"><a href="index.html">Trang chủ</a></li>
+				<li class="item"><a href="Smarthome-Gioithieu.html">Giới thiệu</a></li>
+				<li class="item"><a href="Smarthome-Giaiphap.html">Giải pháp</a></li>
+				<li class="item mm-selected"><a href="Smarthome-Congtrinh.html">Công trình</a></li>
+				<li class="item"><a href="Smarthome-Video.html">Videos</a></li>
+				<li class="item"><a href="Smarthome-Lienhe.html">Liên hệ</a></li>
+			</ul>
+		</nav>
+
+		<script src="js/vendor/jquery-1.11.1.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/wow.min.js"></script>
+		<script src="js/vendor/jquery.stellar.js"></script>
+		<script src="js/vendor/jquery.dd.min.js"></script>
+		<script src="js/vendor/slick.min.js"></script>
+		<script src="js/vendor/jquery.mmenu.min.js"></script>
+		<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+		<script src="js/vendor/smooth-scroll.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

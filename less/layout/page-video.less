@@ -1,0 +1,64 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Video
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.videos {
+	margin: 40px 0;
+}
+
+.list-video {
+	overflow: hidden;
+
+	.item {
+		&:extend(.list-work .item all);
+		padding: 0;
+		border: none;
+
+		&:hover {
+			.caption {
+				background-color: @color-primary;
+			}
+		}
+	}
+
+	.link-wrap {
+		display: block;
+		position: relative;
+
+		&:before {
+			content: "";
+			.position(@top: 0, @left: 0);
+			.square(100%);
+			z-index: 1;
+			background-color: fade(#000, 30%);
+		}
+	}
+
+	.image {
+		&:extend(.list-work .wrap-image .image);
+	}
+
+	.button-play {
+		&:extend(.centering-vert-horiz);
+		z-index: 2;
+		.square(38px);
+		.border(#fff);
+		.border-radius(50%);
+
+		&:after {
+			content: "";
+			&:extend(.centering-vert-horiz);
+			margin-left: 3px;
+			border-top: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			border-left: 12px solid #FFF;
+		}
+	}
+
+	.caption {
+		&:extend(.list-work .wrap-image .caption);
+		z-index: 2;
+		.transition(~"background-color .3s");
+	}
+}

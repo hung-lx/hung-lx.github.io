@@ -1,0 +1,266 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Banner
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.banner {
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 1;
+	position: relative;
+	background-image: url("@{image-url}/bg-banner.jpg");
+
+	.touch & {
+		background-position: 0 0 !important;
+		background-attachment: scroll;
+	}
+
+	&:after {
+		content: "";
+		.position(@top: 0, @left: 0);
+		.size(100%, 100%);
+		z-index: 1;
+		background-color: fade(#000, 20%);
+	}
+
+
+	.inner {
+		padding: 200px 15px 320px;
+		position: relative;
+		z-index: 3;
+	}
+
+	.title-lg {
+		font-size: 50px;
+		font-weight: @font-bold;
+		text-shadow: 3px 4px 5px rgba(1,1,1,.2);
+	}
+
+	.title-md {
+		padding-top: 15px;
+		font-size: 30px;
+		text-shadow: 3px 4px 5px rgba(1,1,1,.2);
+	}
+
+	.button-primary {
+		margin-top: 25px;
+		color: #FFF;
+
+		.icon {
+			margin-top: -5px;
+		}
+	}
+
+
+
+	@media @smallphone {
+		.inner {
+			padding-top: 100px;
+			padding-bottom: 150px;
+		}
+	}
+
+	@media @extra-smallphone {
+		.inner {
+			padding-top: 50px;
+			padding-bottom: 100px;
+		}
+	}
+}
+
+.content-nav {
+	.position(@bottom: 0, @left: 0);
+	width: 100%;
+	padding: 36px 0 30px;
+	background-color: fade(@color-primary, 50%);
+
+	&:before {
+		.position(@bottom: -8px, @left: 0);
+		.size(100%, 8px);
+		z-index: 2;
+		content: "";
+		display: inline-block;
+		background: url("@{image-url}/shadow.png") repeat-x;
+	}
+
+	&.fixed-scroll {
+		.position(@position: fixed, @top: 0, @left: 0);
+		z-index: 1;
+		height: 100px;
+		padding: 15px 0;
+		background-color: #FFF;
+		display: none;
+
+		.text {
+			color: #6E7476;
+			margin-top: 10px;
+		}
+	}
+
+	&.static {
+		position: static;
+		background-color: #F9F9F9;
+
+		.text {
+			color: #6E7476;
+		}
+	}
+
+	.item {
+		text-align: center;
+
+		&:hover {
+			.icon {
+				.transform(rotate(1turn))
+			}
+		}
+	}
+
+	.wrap-icon {
+		display: block;
+
+		.icon {
+			.transition(~"transform .5s ease");
+		}
+	}
+
+	.text {
+		display: block;
+		margin-top: 20px;
+		font-size: 14px;
+		color: #FFF;
+	}
+
+
+	@media @desktop {
+		&.fixed-scroll {
+			height: 120px;
+		}
+	}
+
+	@media @tablet {
+		&.fixed-scroll {
+			display: none !important;
+		}
+
+		.item {
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media @smallphone {
+		display: none;
+	}
+}
+
+.banner-small {
+	position: relative;
+	height: 216px;
+	background: url("@{image-url}/bg-solution.jpg") no-repeat;
+	.background-size(cover);
+	text-align: center;
+
+	> .container,
+	.inner {
+		height: 100%;
+	}
+
+	&.banner-work {
+		background: url("@{image-url}/bg-work.jpg") no-repeat;
+		.background-size(cover);
+	}
+
+	&.banner-video {
+		background: url("@{image-url}/bg-video.jpg") no-repeat;
+		.background-size(cover);
+	}
+
+	&.banner-contact {
+		background: url("@{image-url}/bg-contact.jpg") no-repeat;
+		.background-size(cover);
+
+		// .title {
+		// 	&:extend(.centering-vert);
+		// 	padding-top: 0;
+		// 	font-size: 50px;
+		// 	text-transform: lowercase;
+
+		// 	&:first-letter {
+		// 		text-transform: uppercase;
+		// 	}
+		// }
+	}
+
+	&:after {
+		content: "";
+		.position(@top: 0, @left: 0);
+		.size(100%, 100%);
+		z-index: 1;
+		background: url("@{image-url}/bg-overlay.png") repeat;
+	}
+
+	.inner {
+		position: relative;
+		z-index: 3;
+	}
+
+	.title {
+		padding-top: 40px;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 30px;
+		font-weight: @font-bold;
+		text-shadow: 3px 4px 5px rgba(1,1,1,.2);
+	}
+
+	.description {
+		padding: 10px 100px 0;
+		color: #fffefe;
+		font-size: 21px;
+		text-shadow: 0 1px 3px rgba(0,0,0,.5);
+	}
+
+	.blockquote {
+		padding: 10px 100px 0;
+		color: #FFF;
+		font-size: 19px;
+		font-style: italic;
+		font-family: @font-family-quote;
+
+		&:before {
+			content: "“";
+		}
+
+		&:after {
+			content: "”";
+		}
+	}
+
+
+	@media @phone {
+		.description,
+		.blockquote {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	@media @smallphone {
+		.title {
+			padding-top: 20px;
+		}
+	}
+
+	@media @extra-smallphone {
+		.blockquote {
+			font-size: 17px;
+		}
+	}
+}

@@ -1,0 +1,118 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Mixin
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Color transparent
+.color-transparent(@color, @background) {
+	@percent: alpha(@color) * 100%;
+	@opaque: opacify(@color, 1);
+	@solid-color: mix(@opaque, @background, @percent);
+	color: @solid-color;
+	color: @color;
+}
+
+// Background transparent
+.background-opacity(@color, @opacity) {
+	@rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+	background-color: @rgba-color;
+
+	// Hack for IE8:
+	background: none\9; // Only IE8
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d')", argb(@rgba-color),argb(@rgba-color))); // IE9 and down
+
+	// Problem: Filter gets applied twice in IE9.
+	// Solution:
+	&:not([dummy]) {
+	  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false'); // Only IE9
+	}
+}
+
+// Sizing shortcuts
+.size(@width; @height) {
+	width: @width;
+	height: @height;
+}
+
+// Set the size of something that has equal width and height
+.square(@size) {
+	.size(@size; @size);
+}
+
+// For 1px border
+.border(@color: @border-color) {
+	border: 1px solid @color;
+}
+
+// Position
+.position(@position:absolute, @top:null, @right:null, @bottom:null, @left:null) {
+	position: @position;
+	.property(top, @top);
+	.property(right, @right);
+	.property(bottom, @bottom);
+	.property(left, @left);
+	.property(@property, @value) {
+		// "Private" method
+		._getProp(top) when not (@top = null) {
+			top: @value;
+		}
+		._getProp(right) when not (@right = null) {
+			right: @value;
+		}
+		._getProp(bottom) when not (@bottom = null) {
+			bottom: @value;
+		}
+		._getProp(left) when not (@left = null) {
+			left: @value;
+		}
+		._getProp(@property);
+	};
+}
+
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+	// Firefox 4-18
+	&:-moz-placeholder {
+		color: @color;
+	}
+
+	// Firefox 19+ (See https://github.com/twbs/bootstrap/pull/11526)
+	&::-moz-placeholder {
+		color: @color;
+		opacity: 1;
+	}
+
+	// Internet Explorer 10+
+	&:-ms-input-placeholder {
+		color: @color;
+	}
+
+	// Safari and Chrome
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+
+	// Fallback
+	&.placeholder {
+		color: @color;
+	}
+}
+
+
+// Retina images
+// Short retina mixin for setting background-image and -size
+.img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
+	background-image: url("@{file-1x}");
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		background-image: url("@{file-2x}");
+		background-size: @width-1x @height-1x;
+	}
+}

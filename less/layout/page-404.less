@@ -1,0 +1,63 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Page 404
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.page-404 {
+	padding: 125px 0;
+
+	.image {
+		max-width: 100%;
+		height: auto;
+		float: left;
+		margin: 0 100px 0 150px;
+	}
+
+	.wrap-text {
+		margin-top: 30px;
+	}
+
+	.text-lg {
+		text-transform: uppercase;
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	.button-primary {
+		.box-shadow(none);
+		margin-top: 20px;
+		color: #FFF;
+		padding: 13px 25px 13px 15px;
+		background-color: #197FBD;
+
+		&:hover {
+			background-color: @color-primary;
+		}
+
+		.icon {
+			.rotate(180deg);
+			margin-left: 5px;
+			margin-right: 15px;
+		}
+	}
+
+	@media @desktop {
+		.image {
+			margin-left: 0;
+		}
+	}
+
+	@media @tablet {
+		padding: 50px 0;
+
+		.image {
+			float: none;
+			display: block;
+			margin: auto;
+		}
+
+		.wrap-text {
+			text-align: center;
+		}
+	}
+}

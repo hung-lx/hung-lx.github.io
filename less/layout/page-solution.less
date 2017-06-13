@@ -1,0 +1,102 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Solution
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.solution {
+	margin-bottom: 40px;
+
+	.block-content {
+		overflow: hidden;
+		margin-top: 50px;
+		background-color: #fbfbfb;
+
+		&.left {
+			.image {
+				float: left;
+				margin-left: 0;
+				margin-right: 15px;
+			}
+		}
+
+		.image {
+			float: right;
+			margin-left: 25px;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.wrap-text {
+			padding: 15px;
+			overflow: hidden;
+		}
+
+		.title {
+			.icon {
+				margin-right: 14px;
+			}
+
+			&,
+			a {
+				color: #585858;
+				text-transform: uppercase;
+				font-size: 24px;
+				font-weight: @font-bold;
+			}
+		}
+
+		.description {
+			margin-top: 15px;
+		}
+
+		.view-more {
+			display: inline-block;
+			text-transform: uppercase;
+			color: @color-primary;
+			font-size: 14px;
+			font-weight: @font-bold;
+			margin-top: 15px;
+
+			&:hover {
+				.icon {
+					.animation(~"bounceIn .3s");
+				}
+			}
+		}
+	}
+
+
+	@media @tablet {
+		.block-content {
+			width: 48%;
+			float: left;
+
+			&:nth-child(even) {
+				margin-left: 4%;
+			}
+
+			&:nth-child(2n + 1) {
+				clear: left;
+			}
+
+			.image,
+			&.left .image {
+				float: none;
+				margin: 0;
+			}
+
+			.title .icon {
+				display: none;
+			}
+		}
+	}
+
+	@media @smallphone {
+		.block-content {
+			&,
+			&:nth-child(even) {
+				width: 100%;
+			}
+		}
+	}
+}

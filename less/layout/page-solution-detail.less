@@ -1,0 +1,141 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Solution detail
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.solution-detail {
+	&:extend(.introduce-detail);
+	text-align: center;
+
+	.article-solution-detail {
+		.title {
+			&:extend(.introduce-detail .common-intro .title);
+		}
+
+		.sub-title {
+			margin-top: 10px;
+			text-transform: uppercase;
+			font-size: 24px;
+			font-weight: @font-bold;
+			color: #585858;
+
+			.icon {
+				margin-right: 10px;
+			}
+		}
+
+		.description {
+			margin-top: 5px;
+			color: #585858;
+			font-size: 19px;
+			font-family: @font-family-quote;
+		}
+	}
+
+	.wrap-description-detail {
+		&:extend(.clearfix all);
+		text-align: left;
+
+		.col-content {
+			width: 46%;
+			float: left;
+			margin-bottom: 30px;
+
+			&:nth-child(even) {
+				margin-left: 8%;
+			}
+
+			&:nth-child(2n + 1) {
+				clear: left;
+			}
+		}
+
+		.image {
+			margin-top: 20px;
+			width: 100%;
+			height: auto;
+		}
+
+		.title-ct {
+			font-size: 16px;
+			color: #585858;
+			font-weight: @font-bold;
+			text-transform: uppercase;
+			margin-top: 15px;
+		}
+
+		.description-ct {
+			font-size: 14px;
+			color: #989898;
+			margin-top: 10px;
+		}
+	}
+
+	.bonus-info {
+		margin-bottom: 30px;
+		overflow: hidden;
+
+		> .title {
+			&:extend(.solution-detail .article-solution-detail .sub-title);
+			margin-bottom: 20px;
+			text-align: left;
+		}
+
+		.slider {
+			margin: 0 -10px;
+
+			.item {
+				margin: 0 10px;
+
+				&:hover {
+					.image {
+						border-color: @color-primary;
+					}
+				}
+			}
+
+			.image {
+				.transition(~"border .3s");
+				.border(#e3e3e3);
+				width: 100%;
+				height: auto;
+			}
+
+			.title {
+				.transition(~"color .3s");
+				display: block;
+				margin-top: 7px;
+				font-weight: @font-bold;
+				color: #6D6D6D;
+			}
+
+			.wrap-product-spec {
+				font-size: 14px;
+			}
+
+			.label-ct {
+				display: block;
+				font-weight: @font-bold;
+				color: #6D6D6D;
+				margin-top: 5px;
+			}
+
+			.item-child {
+				display: block;
+			}
+		}
+	}
+
+
+	@media @phone {
+		.wrap-description-detail {
+			.col-content {
+				&,
+				&:nth-child(even) {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
